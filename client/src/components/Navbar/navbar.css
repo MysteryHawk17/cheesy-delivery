@@ -1,0 +1,55 @@
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.navbar
+{
+    /* background-color: lightgray; */
+    -webkit-box-shadow: 2px 9px 5px 0px rgba(196,192,196,1);
+    -moz-box-shadow: 2px 9px 5px 0px rgba(196,192,196,1);
+    box-shadow: 2px 9px 5px 0px rgba(196,192,196,1);
+    height:70px;
+    padding: 1rem;
+
+}
+.container
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo
+{
+    margin-left: 2rem;
+    font-family: 'Bangers';
+    font-size: 2rem;
+    letter-spacing: 5px;
+    background-image: linear-gradient(to right ,red
+    ,orange);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.options
+{
+    display: flex;
+    margin-right: 5rem;
+    gap: 5rem;
+    align-items: center;
+}
+.options h3
+{
+    font-size: 1.5rem;
+    cursor: pointer;
+   
+}
+.cart
+{
+    display: flex;
+    
+    /* justify-content: space-around; */
+}
+
+.icon
+{
+    font-size: 2.5rem;
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.home{
+
+}
+.row{
+display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px;
+}
+.column{
+    margin: 20px;
+}
+.pizz{
+    cursor: pointer;
+}
