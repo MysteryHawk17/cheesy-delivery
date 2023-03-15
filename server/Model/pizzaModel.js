@@ -5,20 +5,16 @@ const pizzaSchema=mongoose.Schema({
         type:String,
         required:true
     },
-    varients:{
-        type:Array,
-        required:true
-    },
-    prices:{
-        type:Array,
-        required:true
-    },
-    catagory:{
+    varients:[String],
+    prices:[
+        Object
+    ],
+    category:{
         type:String,
         required:true
     },
     image:{
-        type:String,
+        type:Object, 
         required:true
     },
     description:{

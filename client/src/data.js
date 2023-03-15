@@ -9,7 +9,7 @@ export const data=[
     ],
     "prices": [
       {
-        "Small": 200,
+        "Small": 200, 
         "Medium": 350,
         "Large": 400,
       }
@@ -37,7 +37,7 @@ export const data=[
     "category": "veg",
 
     "image": "https://www.dominos.co.in/files/items/Peppy_Paneer.jpg",
-    "description":"Pepper BBQ chicken "
+    "description":"Pepper Paneer"
   },
   {
     "id":2,
@@ -57,11 +57,11 @@ export const data=[
     "category": "nonveg",
 
     "image": "https://www.dominos.co.in/files/items/MicrosoftTeams-image_(10).png",
-    "description":"Pepper BBQ chicken "
+    "description":"Morrocan Spice"
   },
   {
     "id":3,
-    "name": "Peppy Paneer",
+    "name": "Mexican Green wave",
     "varients": [
       "Small",
       "Medium",
@@ -77,11 +77,11 @@ export const data=[
     "category": "veg",
 
     "image": "https://www.dominos.co.in/files/items/Mexican_Green_Wave.jpg",
-    "description":"Pepper BBQ chicken "
+    "description":"Mexican Green wave"
   },
   {
     "id":4,
-    "name": "Mexican Green Wave",
+    "name": "Dulex Veggiee",
     "varients": [
       "Small",
       "Medium",
@@ -97,7 +97,7 @@ export const data=[
     "category": "veg",
 
     "image": "https://www.dominos.co.in/files/items/Deluxe_Veggie.jpg",
-    "description":"Pepper BBQ chicken "
+    "description":"Dulex Veggie "
   },
   {
     "id":5,
@@ -117,7 +117,7 @@ export const data=[
     "category": "nonveg",
 
     "image": "https://www.dominos.co.in/files/items/MicrosoftTeams-image_(11).png",
-    "description":"Pepper BBQ chicken "
+    "description":"Chicken Pepperoni "
   },
   {
     "id":6,
@@ -137,7 +137,7 @@ export const data=[
     "category": "nonveg",
 
     "image": "https://www.dominos.co.in/files/items/MicrosoftTeams-image_(14).png",
-    "description":"Pepper BBQ chicken "
+    "description":"Indi Chicken Tikka Pizza "
   }
 
 ]
