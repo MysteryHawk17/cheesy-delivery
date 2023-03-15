@@ -8,13 +8,13 @@
     box-shadow: 2px 9px 5px 0px rgba(196,192,196,1);
     height:70px;
     padding: 1rem;
-
+    width: 100%;
 }
 .container
 {
     display: flex;
     justify-content: space-between;
-    
+    width: 100%;
 }
 .logo
 {
@@ -53,3 +53,14 @@
     font-size: 2.5rem;
     cursor: pointer;
 }
+@media screen and (max-width: 570px) {
+    .logo{
+        display: none;
+    }
+
+    .options{
+        width: 100%;
+        margin-right: 0px;
+        justify-content: space-between;
+    }
+  }

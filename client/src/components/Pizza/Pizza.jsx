@@ -1,11 +1,20 @@
 import React, { useState } from 'react'
 import './pizza.css'
+import { useDispatch,useSelector } from 'react-redux'
+import { addToCart } from '../../actions/cartActions'
 const Pizza = ({ pizza}) => {
- 
     const [varient, setVarient] = useState('Small')
     const [quantity, setQuantity] = useState(1);
     const[show,setShow]=useState(false)
+    const dispatch=useDispatch()
     // console.log(pizza.prices[0].Small)
+    const handleClick=()=>{
+        console.log(pizza.name)
+        console.log(varient)
+        console.log(quantity)
+        console.log(pizza.prices[0][varient] * quantity)
+        dispatch(addToCart(pizza,quantity,varient))
+    }
     return (
         <div className='pizza'>
             <div className="container" >
@@ -14,7 +23,7 @@ const Pizza = ({ pizza}) => {
                 setShow(true)
             }} />
                 <div className="pizzaOptions">
-                    {/* <div className="varient">
+                    <div className="varient">
                         <label htmlFor="varients">Varients:</label>
 
                         <select name="varients" id="varients"
@@ -25,18 +34,18 @@ const Pizza = ({ pizza}) => {
                             style={{ padding: "5px", fontSize: "20px" }}
                         >
                           
-                            {pizza.varients[0].map((varient) => {
+                            {pizza.varients.map((varient) => {
                                 return (
                                     <option value={varient}>{varient}</option>
                                 )
                             })}
                         </select>
-                    </div> */}
+                    </div>
                     <div className="number">
                         <label htmlFor="quantity">Quantity:</label>
                         <input type="number"
 
-                            min={0}
+                            min={1}
                             id='quantity'
                             style={{ padding: "5px", fontSize: "20px" }}
                             value={quantity}
@@ -48,7 +57,7 @@ const Pizza = ({ pizza}) => {
                 </div>
                 <div className="orderPizza">
                     <p>Price:{pizza.prices[0][varient] * quantity}Rs/-</p>
-                    <button className='addToCart'>Add to Cart</button>
+                    <button className='addToCart' onClick={()=>{handleClick()}}>Add to Cart</button>
                 </div>
             </div>
             {show&&<div className="detailed">

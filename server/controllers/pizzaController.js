@@ -37,29 +37,32 @@ const createPizza=async(req,res)=>{
           }
      }
      console.log(typeof(prices))
-    
-     // const pricesData=JSON.parse(prices)
-     // const varientData=varients.split(",")
-     // console.log(pricesData)
+     const pricesData=JSON.parse(prices)
+     console.log(pricesData)
+     
+//     console.log(JSON.parse({Small:200,Medium:350,Large:400}))
+     const varientData=varients.split(",")
+     console.log(pricesData)
+     console.log(varientData)
      const newPizza=new pizzaDb({
           name:name,
-          varients:varients,
-          prices:prices ,
+          varients:varientData,
+          prices:pricesData ,
           category:category,
           image:fileData,
           description:description
      })
      console.log(newPizza)
-     // try {
-     //      // const savedPizza=await newPizza.save();
-     //      console.log("Created pizza successfully")
-     //      // console.log(savedPizza)
-     //      // res.status(200).json({message:"Successfully saved the pizza",savedPizza})
-     // } catch (error) {
-     //      console.log("Error in saving pizza")
-     //      console.log(error)
-     //      res.status(400).json({message:"Error in saving the pizza"})
-     // }
+     try {
+          const savedPizza=await newPizza.save();
+          console.log("Created pizza successfully")
+          console.log(savedPizza)
+          res.status(200).json({message:"Successfully saved the pizza",savedPizza})
+     } catch (error) {
+          console.log("Error in saving pizza")
+          console.log(error)
+          res.status(400).json({message:"Error in saving the pizza"})
+     }
      
 
 }
@@ -90,7 +93,7 @@ const updatePizza=async(req,res)=>{
           const updatedData=await pizzaDb.findByIdAndUpdate({_id:req.params.id},{
                name,
                varients,
-               prices,
+               prices, 
                category,
                description
           },{new:true});

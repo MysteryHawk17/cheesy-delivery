@@ -1,7 +1,12 @@
 import React from 'react'
 import './navbar.css'
+import { useSelector,useDispatch } from 'react-redux'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 const Navbar = () => {
+  const dispatch=useDispatch();
+  const cartState=useSelector(state=>state.cartReducer)
+  const{cartItems}=cartState;
+  console.log(cartItems)
   return (
     <div className='navbar'>
       <div className="container">
@@ -12,7 +17,7 @@ const Navbar = () => {
           <h3>Login</h3>
           <div className="cart">
             <AiOutlineShoppingCart className='icon' />
-            <p className='quantity'>4</p>
+            <p className='quantity'>{cartItems.length}</p>
           </div>
 
         </div>
