@@ -9,11 +9,14 @@ const finalReducer=combineReducers({
     cartReducer:cartReducer
 })
 const cartItems=localStorage.getItem('cartItems')?JSON.parse(localStorage.getItem('cartItems')):[];
-
+// console.log(cartItems)
 const initalState={
     cartReducer:{
     cartItems:cartItems
 }}
+// console.log(
+//     initalState
+// )
 const store=configureStore(
     {
         reducer:finalReducer,

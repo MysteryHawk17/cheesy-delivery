@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './pizza.css'
-import { useDispatch,useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addToCart } from '../../actions/cartActions'
 const Pizza = ({ pizza}) => {
     const [varient, setVarient] = useState('Small')
