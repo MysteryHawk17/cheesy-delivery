@@ -5,6 +5,7 @@ import Pizza from '../../components/Pizza/Pizza'
 // import { data } from '../../data.js'
 import './home.css'
 import { getPizza } from '../../actions/pizzaActions'
+import Loader from '../../components/Loader/Loader'
 const Home = () => {
 
   const dispatch = useDispatch()
@@ -14,7 +15,7 @@ const Home = () => {
     dispatch(getPizza())
     // setPizzas(pizza?.pizza)
   }, [])
-  console.log(pizza)
+  // console.log(pizza)
  
   // if(!loading)
   // {setPizzas(pizza?.pizza)}
@@ -23,7 +24,7 @@ const Home = () => {
     <div className='home'>
       <div className="row">
         {loading ?(
-        <h1>Loading!!</h1>
+        <Loader/>
       )  : error ? (<h1>Something went wrong</h1>) : (pizza?.map((pizza) => {
 
           return (

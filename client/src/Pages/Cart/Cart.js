@@ -8,7 +8,7 @@ const Cart = () => {
   var subtotal= cartItems.reduce((x,item)=>{
     return(x+item.price)
   },0)
-  console.log(subtotal)
+  // console.log(subtotal)
   return (
     <div className='cartpage'>
         <div className="cartitems">
