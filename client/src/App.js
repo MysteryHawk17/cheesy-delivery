@@ -16,7 +16,7 @@ function App() {
       <Navbar/>
       <Routes>
       <Route path="/"  element={<Home/>}/>
-      <Route path="/cart"  element={<Cart/>}/>
+      <Route path="/cart"  element={logininfo ? <Cart/> :<Navigate to='/login'/>}/>
       <Route path='/login' element={logininfo ? <Navigate to="/" /> : <Login />} />
       <Route path='/register' element={logininfo ? <Navigate to="/" /> : <Register />} />
       

@@ -27,7 +27,7 @@ const Navbar = () => {
             navigate("/")
           }}
         >
-          <h3>Cheesy Pizza</h3>
+          <h3>Cheesy Delivery</h3>
         </div>
 
         <div className="options">

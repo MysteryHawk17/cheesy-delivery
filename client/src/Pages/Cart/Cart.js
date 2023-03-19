@@ -2,6 +2,7 @@ import React from 'react'
 import CartItem from '../../components/Cart Items/CartItem'
 import './cart.css'
 import { useDispatch,useSelector } from 'react-redux'
+import Checkout from '../../components/Checkout/Checkout'
 const Cart = () => {
   const cartState=useSelector(state=>state.cartReducer)
   const {cartItems}=cartState
@@ -27,9 +28,7 @@ const Cart = () => {
         </div>
         <div className="subTotal">
             <h2>SubTotal = {subtotal} /-</h2>
-            <button>
-                Pay Now
-            </button>
+            <Checkout subtotal={subtotal}/>
         </div>
     </div>
   )

@@ -3,13 +3,15 @@ import { configureStore } from '@reduxjs/toolkit'
 import { getAllPizzaReducer } from "./reducers/pizzaReducers";
 import { cartReducer } from "./reducers/cartReducers";
 import { loginUserReducer, registerUserReducer } from "./reducers/userReducers";
+import { placeOrderReducer } from "./reducers/orderReducers";
 
 
 const finalReducer = combineReducers({
     getAllPizzaReducer: getAllPizzaReducer,
     cartReducer: cartReducer,
     registerUserReducer: registerUserReducer,
-    loginUserReducer: loginUserReducer
+    loginUserReducer: loginUserReducer,
+    placeOrderReducer:placeOrderReducer
 })
 const cartItems = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
 const logininfo = localStorage.getItem('logininfo') ? JSON.parse(localStorage.getItem('logininfo')) : [];
