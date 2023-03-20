@@ -5,8 +5,8 @@ import {AiOutlinePlus,AiOutlineMinus} from 'react-icons/ai'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart,deleteFromCart,updateCart } from '../../actions/cartActions'
 const CartItem = ({pizza}) => {
-  console.log(pizza)
-  const[quantity,setQuantity]=useState(pizza.quantity)
+  // console.log(pizza)
+  // const[quantity,setQuantity]=useState(pizza.quantity)
   const dispatch=useDispatch();
   const handleClick=(s)=>{
     console.log("I am here")

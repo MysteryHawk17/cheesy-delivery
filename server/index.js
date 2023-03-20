@@ -11,7 +11,7 @@ require("dotenv").config()
 const pizzaRoutes=require("./routes/pizzaRoutes")
 const authRoutes=require("./routes/authRoutes")
 const orderRoutes=require("./routes/orderRoutes")
-
+const userRoutes=require("./routes/userRoutes")
 
 
 //Middlewares
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/pizza",pizzaRoutes);
 app.use("/api/auth",authRoutes)
 app.use("/api/order",orderRoutes)
-
+app.use("/api/user",userRoutes)
 
 //Server test route
 app.get("/",(req,res)=>{

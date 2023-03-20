@@ -16,8 +16,8 @@ const Navbar = () => {
 
   const navigate = useNavigate()
   const handleClick=()=>{
-    dispatch(logoutUser());
-    navigate("/")
+    dispatch(logoutUser(navigate));
+
   }
   return (
     <div className='navbar'>
@@ -39,6 +39,9 @@ const Navbar = () => {
             }
           }>
           {logininfo?<h3
+          onClick={()=>{
+            navigate("/profile")
+          }}
           style={{
             marginRight:"4rem"
           }}>{logininfo[0].user.name}</h3>:""}

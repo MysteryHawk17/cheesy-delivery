@@ -19,33 +19,33 @@ const Login = () => {
       password: e.target[1].value
 
     }
-    dispatch(loginUser(user));
+    dispatch(loginUser(user,navigate));
     const { loading, success, userInfo, token, error } = loginstate;
-   if(loading===false) {
-      if (success) {
-        const loginInfo = [
-          {
-            token: token,
-            user: userInfo
-          }
+  //  if(loading===false) {
+  //     if (success) {
+  //       const loginInfo = [
+  //         {
+  //           token: token,
+  //           user: userInfo
+  //         }
 
-        ]
-        localStorage.setItem("logininfo", JSON.stringify(loginInfo));
+  //       ]
+  //       localStorage.setItem("logininfo", JSON.stringify(loginInfo));
 
 
-        navigate("/")
+  //       navigate("/")
 
-      }
+  //     }
 
-      else {
-        alert("Error in loging in. Try Again")
-      }
-    }
-    else{
-      <div>
-        <Loader/>
-      </div>
-    }
+  //     else {
+  //       alert("Error in loging in. Try Again")
+  //     }
+  //   }
+    // else{
+    //   <div>
+    //     <Loader/>
+    //   </div>
+    // }
     
   }
   return (

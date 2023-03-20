@@ -6,7 +6,7 @@ export const placeOrderReducer=(state={},action)=>{
         case'PLACE_ORDER_SUCCESS':return{
             loading:false,
             success:true,
-            status:action.payload
+            data:action.payload
         }
         case'PLACE_ORDER_FAILURE':return{
             loading:false,

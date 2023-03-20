@@ -6,6 +6,7 @@ import { BrowserRouter, Navigate, redirect, useNavigate  } from "react-router-do
 import { Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Login/Register";
+import Profile from "./Pages/Profile/Profile";
 
 function App() {
   
@@ -19,7 +20,7 @@ function App() {
       <Route path="/cart"  element={logininfo ? <Cart/> :<Navigate to='/login'/>}/>
       <Route path='/login' element={logininfo ? <Navigate to="/" /> : <Login />} />
       <Route path='/register' element={logininfo ? <Navigate to="/" /> : <Register />} />
-      
+      <Route path="/profile" element={logininfo ? <Profile/> :<Navigate to='/login'/>}/>
       </Routes>
       </BrowserRouter>
     </div>

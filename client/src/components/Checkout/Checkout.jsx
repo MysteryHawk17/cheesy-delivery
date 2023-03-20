@@ -3,15 +3,22 @@ import './checkout.css'
 import StripeCheckout from 'react-stripe-checkout'
 import { useSelector,useDispatch } from 'react-redux'
 import { placeorder } from '../../actions/orderActions'
+import { useNavigate } from 'react-router-dom'
 const Checkout = ({ subtotal }) => {
     const dispatch=useDispatch();
+    const navigate=useNavigate()
     const loginState=useSelector(state=>state.loginUserReducer)
     const {logininfo}=loginState
     const currentuser=logininfo[0].user
-
+   
+    
+    // const orderState=useSelector(state=>state.placeOrderReducer)
+    
     const tokenhandler = (token) => {
         console.log(token)
-        dispatch(placeorder(token,subtotal,currentuser))
+        
+        dispatch(placeorder(token,subtotal,currentuser,navigate))
+       
     }
     
     return (

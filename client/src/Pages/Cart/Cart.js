@@ -3,13 +3,20 @@ import CartItem from '../../components/Cart Items/CartItem'
 import './cart.css'
 import { useDispatch,useSelector } from 'react-redux'
 import Checkout from '../../components/Checkout/Checkout'
+import { useNavigate } from 'react-router-dom'
 const Cart = () => {
   const cartState=useSelector(state=>state.cartReducer)
+  const orderState=useSelector(state=>state.placeOrderReducer)
+  const navigate=useNavigate()
   const {cartItems}=cartState
+  const{loading,error,success}=orderState;
+
+  
+  console.log(orderState)
   var subtotal= cartItems.reduce((x,item)=>{
     return(x+item.price)
   },0)
-  // console.log(subtotal)
+  console.log(cartItems)
   return (
     <div className='cartpage'>
         <div className="cartitems">
