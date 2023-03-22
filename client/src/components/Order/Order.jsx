@@ -2,8 +2,8 @@ import React from 'react'
 import "./order.css"
 const Order = ({ order }) => {
   console.log(order)
-  const{details,subtotal,orderStatus,address}=order
-  console.log(address)
+  const{details,subtotal,orderStatus,address,createdAt}=order
+  // console.log(createdAt.substring(0,10))
   return (
     <div className='orderr'>
 
@@ -31,7 +31,7 @@ const Order = ({ order }) => {
         <h3>Payment Details</h3>
         <p>Price : {subtotal}</p>
         <p>Order Status :{orderStatus ? "Placed" : "Failed"}</p>
-        <p>Date : 2021-04-10</p>
+        <p>Date : {createdAt.substring(0,10)}</p>
 
       </div>
 
