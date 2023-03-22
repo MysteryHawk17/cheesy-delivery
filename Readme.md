@@ -1,6 +1,6 @@
 # Pizza Delivery System
 
-This is a full-stack pizza delivery system that includes user authentication, a cart system, a home page, and payment gateway integration. The system is built using several technologies, including:
+This is a full-stack pizza ordering system that includes user authentication, a cart system, a home page, and payment gateway integration. The system is built using several technologies, including:
 
 - React.js for the front-end
 - Node.js and Express.js for the back-end
