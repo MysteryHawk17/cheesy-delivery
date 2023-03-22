@@ -23,7 +23,7 @@ export const registerUser=(user,alert,navigate)=>async dispatch=>{
 export const loginUser=(user,navigate)=>async (dispatch,getState)=>{
     dispatch({type:"USER_LOGIN_REQUEST"});
     try {
-        const response=await axios.post('http://localhost:5000/api/auth/login',user)
+        const response=await axios.post('https://cheesy-delivery-production.up.railway.app/api/auth/login',user)
         dispatch({type:"USER_LOGIN_SUCCESS",payload:response});
 
     const loginState=getState().loginUserReducer;
