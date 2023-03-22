@@ -8,7 +8,7 @@ export const placeorder=(token,subtotal,currentuser,navigate)=>async(dispatch,ge
     const cartItems=getState().cartReducer.cartItems;
     
     try {
-        const response=await axios.post("http://localhost:5000/api/order/payment",{token,subtotal,currentuser,cartItems})
+        const response=await axios.post("https://cheesy-delivery-production.up.railway.app/api/order/payment",{token,subtotal,currentuser,cartItems})
         dispatch({type:"PLACE_ORDER_SUCCESS",payload:response.data})
         console.log(response)
         navigate("/profile")

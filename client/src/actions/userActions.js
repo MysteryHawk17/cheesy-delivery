@@ -8,7 +8,7 @@ export const registerUser=(user,alert,navigate)=>async dispatch=>{
             },
         };
         console.log(user)
-        const response=await axios.post('http://localhost:5000/api/auth/register',user,config)
+        const response=await axios.post('https://cheesy-delivery-production.up.railway.app/api/auth/register',user,config)
         dispatch({type:"USER_REGISTER_SUCCESS",payload:response.status});
         alert("User Registration Successful")
         navigate("/login")
