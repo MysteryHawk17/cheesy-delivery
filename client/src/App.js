@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar/Navbar";
-import './app.css'
+import './main.css'
 import Home from "./Pages/Home/Home";
 import Cart from "./Pages/Cart/Cart";
 import { BrowserRouter, Navigate, redirect, useNavigate  } from "react-router-dom";
