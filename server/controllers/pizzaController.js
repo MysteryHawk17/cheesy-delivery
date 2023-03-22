@@ -1,4 +1,4 @@
-const { formatFileSize } = require("../../../inventory--management-application/innventory management/src/utils/fileUpload")
+const { formatFileSize } = require("../utils/multer")
 const pizzaDb=require("../Model/pizzaModel")
 const cloudinary=require("../utils/cloudinary")
 

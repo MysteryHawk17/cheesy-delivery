@@ -1,6 +1,6 @@
 const userDB = require("../Model/userModel")
 const bcrypt = require("bcryptjs")
-const { formatFileSize } = require("../../../inventory--management-application/innventory management/src/utils/fileUpload")
+const { formatFileSize } = require("../utils/multer")
 const jwt=require("jsonwebtoken")
 const cloudinary=require("../utils/cloudinary")
 require('dotenv').config();
