@@ -16,7 +16,7 @@ export const addToCart=(pizza,quantity,varient)=>(dispatch,getState)=>{
     }
     else if(cartItem.quantity>10)
     {
-        alert("Cannot able to add items more that 10")
+        alert("Cannot add more than 10 of same item")
     }
     else
     {dispatch({type:"ADD_TO_CART",payload:cartItem})}

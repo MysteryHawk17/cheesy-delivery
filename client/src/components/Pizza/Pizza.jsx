@@ -50,7 +50,8 @@ const Pizza = ({ pizza}) => {
                             style={{ padding: "5px", fontSize: "20px" }}
                             value={quantity}
                             onChange={(e) => {
-                                setQuantity(e.target.value)
+                                const value = e.target.value.replace(/\D/g, "");
+                                setQuantity(value)
                             }}
                         />
                     </div>
