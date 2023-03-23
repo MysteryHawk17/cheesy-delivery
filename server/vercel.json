@@ -8,9 +8,7 @@
     ],
     "routes": [
       {
-        "controllers": "/(.*)",
-        "routes": "/(.*)",
-        "mongodb": "/(.*)",
+        "src":"/",
         "dest": "/"
       }
     ]
