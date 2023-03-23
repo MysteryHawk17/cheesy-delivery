@@ -1,4 +1,4 @@
-const { formatFileSize } = require("../utils/multer")
+
 const pizzaDb=require("../Model/pizzaModel")
 const cloudinary=require("../utils/cloudinary")
 
@@ -33,7 +33,7 @@ const createPizza=async(req,res)=>{
                fileName:req.file.originalname,
                filePath:uploadedFile.secure_url,
                fileType:req.file.mimetype,
-               fileSize:formatFileSize(req.file.size,2)
+              
           }
      }
      console.log(typeof(prices))

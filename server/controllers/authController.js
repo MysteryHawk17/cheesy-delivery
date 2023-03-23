@@ -1,6 +1,6 @@
 const userDB = require("../Model/userModel")
 const bcrypt = require("bcryptjs")
-const { formatFileSize } = require("../utils/multer")
+
 const jwt=require("jsonwebtoken")
 const cloudinary=require("../utils/cloudinary")
 require('dotenv').config();
@@ -38,7 +38,6 @@ const registerUser = async (req, res) => {
                fileName:req.file.originalname,
                filePath:uploadedFile.secure_url,
                fileType:req.file.mimetype,
-               fileSize:formatFileSize(req.file.size,2)
           }
      }
      

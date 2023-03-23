@@ -1,5 +1,5 @@
 const { registerUser, loginUser, test } = require('../controllers/authController');
-const {upload}=require("../utils/multer")
+const upload=require("../utils/multer")
 const router=require('express').Router();
 
 router.get("/test",test);
