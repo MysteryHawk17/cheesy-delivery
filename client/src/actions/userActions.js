@@ -8,7 +8,7 @@ export const registerUser=(user,alert,navigate)=>async dispatch=>{
             },
         };
         console.log(user)
-        const response=await axios.post('https://cheesy-delivery-production.up.railway.app/api/auth/register',user,config)
+        const response=await axios.post('https://cheesy-delivery-api.vercel.app/api/auth/register',user,config)
         dispatch({type:"USER_REGISTER_SUCCESS",payload:response.status});
         alert("User Registration Successful")
         navigate("/login")
@@ -23,7 +23,7 @@ export const registerUser=(user,alert,navigate)=>async dispatch=>{
 export const loginUser=(user,navigate)=>async (dispatch,getState)=>{
     dispatch({type:"USER_LOGIN_REQUEST"});
     try {
-        const response=await axios.post('https://cheesy-delivery-production.up.railway.app/api/auth/login',user)
+        const response=await axios.post('https://cheesy-delivery-api.vercel.app/api/auth/login',user)
         dispatch({type:"USER_LOGIN_SUCCESS",payload:response});
 
     const loginState=getState().loginUserReducer;
