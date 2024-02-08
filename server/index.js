@@ -16,7 +16,7 @@ const userRoutes=require("./routes/userRoutes")
 
 //Middlewares
 app.use(cors({
-    origin:["http://localhost:3000","http://192.168.0.193:3000/","https://cheesy-delivery.vercel.app"]
+    origin:["http://localhost:3000","http://192.168.0.193:3000","https://cheesy-delivery-nxr2.vercel.app"]
 }))
 app.use(express.json());
 app.use(bodyParser.json());
