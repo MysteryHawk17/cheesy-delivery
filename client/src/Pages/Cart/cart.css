@@ -1,55 +1,59 @@
-.cartpage
-{
-    /* border: 2px solid red; */
+.cartpage {
+    
     display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1000px;
     padding: 1rem 1rem;
-    margin: 1rem auto;
-    justify-content: space-between;
-
+    margin: 5rem auto;
 }
-.cartpage h2
-{
+
+.cartpage h2 {
     text-align: center;
     margin: 10px 0px;
     font-size: 2rem;
     font-weight: 500;
 }
-.cartitems
-{
-    flex: 2;
-    margin-right: 4rem;
+
+.cartitems,
+.subTotal {
+    width: 100%;
+    margin: 1rem 0;
 }
-.cartitems h2{
-    margin-bottom: 2.4rem
-}
-.subTotal{
+
+.subTotal {
     display: flex;
-    height: fit-content;
-   
-  
+    align-items: center;
+    justify-content: space-between;
 }
-.subTotal h2{
+
+.subTotal h2 {
     text-align: center;
     font-weight: 700;
 }
-.subTotal button{
+
+.subTotal button {
     cursor: pointer;
-    height: fit-content;
-    align-self: end;
-    margin-top: 5rem;
     padding: 0.6rem;
     background-color: red;
     color: white;
     font-weight: 700;
     border: none;
     border-radius: 5px;
+}
 
-    /* align-items: end; */
-    /* width: fit-content; */
-    /* align-items: flex-end; */
-    /* justify-content: flex-end; */
-    /* justify-self: flex-end; */
+@media screen and (min-width: 768px) {
+    .cartpage {
+        flex-direction: row; 
+    }
 
+    .cartitems {
+        margin-right: 4rem; 
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .subTotal button {
+        margin-top: 0; 
+    }
 }
